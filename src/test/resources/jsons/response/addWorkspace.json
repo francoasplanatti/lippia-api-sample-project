@@ -1,0 +1,7 @@
+{
+  "id": "{{workspaceid}}",
+  "name": "{{workspacename}}",
+  "organizationId": "{{organizationid}}"
+}
+
+

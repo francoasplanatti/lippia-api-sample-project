@@ -20,7 +20,7 @@
         <base.api.url>https://reqres.in/api/users</base.api.url>
         <cucumber.stepsDefinitions>--glue ar/steps --glue com/crowdar/api/rest</cucumber.stepsDefinitions>
         <cucumber.hooks>--glue com/crowdar/bdd/cukes --glue ar/apiExampleProject/hook</cucumber.hooks>
-        <cucumber.tags>@Success</cucumber.tags>
+        <cucumber.tags>@prueba</cucumber.tags>
         <crowdar.cucumber.plugins>--plugin pretty --plugin api.report.CucumberReporter:</crowdar.cucumber.plugins>
         <crowdar.extent.host.name>LocalMachine</crowdar.extent.host.name>
         <crowdar.extent.environment>Local</crowdar.extent.environment>
@@ -74,12 +74,12 @@
         <dependency>
             <groupId>io.lippia</groupId>
             <artifactId>core</artifactId>
-            <version>3.3.0.3</version>
+            <version>3.3.0.2</version>
         </dependency>
         <dependency>
             <groupId>io.lippia.report</groupId>
             <artifactId>ltm-cucumber4-adapter</artifactId>
-            <version>1.4</version>
+            <version>1.2</version>
         </dependency>
         <dependency>
             <groupId>io.lippia.report</groupId>
@@ -95,12 +95,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M4</version>
+                <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>${apiExample.runner}</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
+                        <rest.api.base.url>https://api.clockify.me/api</rest.api.base.url>
+                        <rest.api.base.path>v1</rest.api.base.path>
                         <TEST_MANAGER_USERNAME></TEST_MANAGER_USERNAME>
                         <TEST_MANAGER_PASSWORD></TEST_MANAGER_PASSWORD>
                         <TEST_MANAGER_API_HOST></TEST_MANAGER_API_HOST>

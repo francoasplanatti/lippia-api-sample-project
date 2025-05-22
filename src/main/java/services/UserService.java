@@ -12,7 +12,7 @@ import java.util.Map;
 public class UserService extends MethodsService {
 
     public static Response get(String jsonName) {
-       return get(jsonName, Data.class);
+        return get(jsonName, Data.class);
     }
 
     public static Response delete(String jsonName) {
@@ -32,5 +32,3 @@ public class UserService extends MethodsService {
     }
 
 }
-
-
